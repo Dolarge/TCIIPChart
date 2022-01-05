@@ -52,6 +52,7 @@ namespace TCIIPChart.ViewModel
         {
             //9999포트에 ip주소다 받기
             server = new TcpListener(IPAddress.Any, 9999);
+
             // Server 시작
             server.Start();
             ServerChart.Add(new MessageModel
