@@ -36,5 +36,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button Grid.Column="4" Grid.Row="2" Content="Close" Command="{Binding CloseServer}"/>
     </Grid>
 </Window>
