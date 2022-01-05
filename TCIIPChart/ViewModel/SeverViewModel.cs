@@ -10,6 +10,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
 using TCIIPChart.Model;
@@ -31,10 +32,12 @@ namespace TCIIPChart.ViewModel
         {
 
             this.ConnectBtnClick = new DelegateCommand<object>(this.ServerStart, Cansubmit);
+
         }
 
 
         private bool Cansubmit(object arg) { return true; }
+        private readonly object _lock = new object();
 
 
         public static string? stringData = null;
@@ -71,25 +74,42 @@ namespace TCIIPChart.ViewModel
             //client가 접속할때까지 서버는 해당 구문에서 블락
             client = server.AcceptTcpClient();
 
-            //client에서 받은 데이터를 받을 객체 생성
-            ns = client.GetStream();
-
-
-            ns.Read(byteData, 0, byteData.Length);
-
-            string stringData = Encoding.Default.GetString(byteData);
-
-            ServerChart.Add(new MessageModel
+            while (true)
             {
-                Time = DateTime.Now,
-                message = stringData
-            });
+                client.GetStream().Read(byteData, 0, byteData.Length);
+                string stringData = Encoding.Default.GetString(byteData);
+
+                int endPoint = stringData.IndexOf('\0');
+
+                string parsedMessage = stringData.Substring(0, endPoint + 1);
+
+                ServerChart.Add(new MessageModel
+                {
+                    Time = DateTime.Now,
+                    message = parsedMessage
+                });
+
+                if (parsedMessage == "break text\0")
+                {
+                    break;
+                }
+
+                Task.Run(async () =>
+                {
+                    await updateData();
+                }).Wait();
+
+            }
 
 
 
 
         }
+        private async Task updateData()
+        {
+            Console.WriteLine(ServerChart[ServerChart.Count - 1].message);
 
+        }
         public void CloseServer(object obj)
         {
             server.Stop();
