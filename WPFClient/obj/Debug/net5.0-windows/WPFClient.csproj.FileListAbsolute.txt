@@ -22,4 +22,3 @@ D:\TCPIP\GIT\TCIIPChart\WPFClient\obj\Debug\net5.0-windows\WPFClient.pdb
 D:\TCPIP\GIT\TCIIPChart\WPFClient\obj\Debug\net5.0-windows\WPFClient.genruntimeconfig.cache
 D:\TCPIP\GIT\TCIIPChart\WPFClient\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\TCPIP\GIT\TCIIPChart\WPFClient\bin\Debug\net5.0-windows\Prism.dll
-D:\TCPIP\GIT\TCIIPChart\WPFClient\obj\Debug\net5.0-windows\WPFClient.csproj.CopyComplete

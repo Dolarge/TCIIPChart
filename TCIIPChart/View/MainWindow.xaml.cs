@@ -11,20 +11,11 @@ namespace TCIIPChart
         public MainWindow()
         {
             InitializeComponent();
-
+            
             ViewModel.SeverViewModel severViewModel = new ViewModel.SeverViewModel();
             this.DataContext = severViewModel;
 
-            //if close window
-            if (severViewModel.CloseAction == null)
-            {
-                //socket dipose 
-
-                //close window
-                severViewModel.CloseAction = new System.Action(() => this.Close());
-
-            }
-
+           
         }
 
 

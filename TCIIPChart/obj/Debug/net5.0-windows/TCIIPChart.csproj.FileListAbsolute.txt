@@ -18,7 +18,6 @@ D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.Generated
 D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.AssemblyInfoInputs.cache
 D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.AssemblyInfo.cs
 D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.csproj.CoreCompileInputs.cache
-D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.csproj.CopyComplete
 D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.dll
 D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\ref\TCIIPChart.dll
 D:\TCPIP\GIT\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows\TCIIPChart.pdb
