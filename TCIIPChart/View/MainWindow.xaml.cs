@@ -11,8 +11,7 @@ namespace TCIIPChart
         public MainWindow()
         {
             InitializeComponent();
-            
-            ViewModel.ChartServer severViewModel = new ViewModel.ChartServer();
+            ViewModel.ServerViewModel severViewModel = new ViewModel.ServerViewModel();            
             this.DataContext = severViewModel;
 
            

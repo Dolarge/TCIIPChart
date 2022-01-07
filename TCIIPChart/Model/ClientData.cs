@@ -9,15 +9,35 @@ namespace TCIIPChart.Model
 {
     class ClientData
     {
-        // 연결이 확인된 클라이언트를 넣어줄 클래스입니다.
-        // readByteData는 stream데이터를 읽어올 객체입니다.
-        public TcpClient client { get; set; }
-        public byte[] readByteData { get; set; }
+        public static bool isdebug = true;
+        public TcpClient tcpClient { get; set; }
+        public Byte[] readBuffer { get; set; }
+        public StringBuilder currentMsg { get; set; }
+        public string clientName { get; set; }
+        public int clientNumber { get; set; }
 
-        public ClientData(TcpClient client)
+        public ClientData(TcpClient tcpClient)
         {
-            this.client = client;
-            this.readByteData = new byte[1024];
+            currentMsg = new StringBuilder();
+            readBuffer = new byte[1024];
+
+            this.tcpClient = tcpClient;
+
+            char[] splitDivision = new char[2];
+            splitDivision[0] = '.';
+            splitDivision[1] = ':';
+
+            string[] temp = null;
+            if (isdebug)
+            {
+                temp = tcpClient.Client.LocalEndPoint.ToString().Split(splitDivision);
+            }
+            else
+            {
+                temp = tcpClient.Client.RemoteEndPoint.ToString().Split(splitDivision);
+            }
+
+            this.clientNumber = int.Parse(temp[3]);
         }
     }
 }
