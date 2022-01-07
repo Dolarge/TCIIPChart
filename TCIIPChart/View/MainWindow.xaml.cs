@@ -12,7 +12,7 @@ namespace TCIIPChart
         {
             InitializeComponent();
             
-            ViewModel.SeverViewModel severViewModel = new ViewModel.SeverViewModel();
+            ViewModel.ChartServer severViewModel = new ViewModel.ChartServer();
             this.DataContext = severViewModel;
 
            
