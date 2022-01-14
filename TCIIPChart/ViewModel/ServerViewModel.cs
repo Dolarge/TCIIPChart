@@ -35,7 +35,6 @@ namespace TCIIPChart.ViewModel
 
         public ServerViewModel()
         {
-            MessageBox.Show("TEST");
 
 
             MainServerStart();
