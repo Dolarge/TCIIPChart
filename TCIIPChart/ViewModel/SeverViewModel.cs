@@ -18,24 +18,84 @@ namespace TCIIPChart.ViewModel
 
         public ObservableCollection<MessageModel> ServerChart { get; set; } = new ObservableCollection<MessageModel>();
 
-        public ICommand ConnectBtnClick { get;private set;  }
+        public ICommand ConnectBtnClick { get; private set; }
 
 
         public SeverViewModel()
         {
-            this.ConnectBtnClick = new DelegateCommand<object>(this.connectionListen, Cansubmit);
+
+            this.ConnectBtnClick = new DelegateCommand<object>(this.ServerStart, Cansubmit);
         }
+
 
         private bool Cansubmit(object arg) { return true; }
 
 
-        public static string stringData = null;
-        
-        //Creat TCP/IP socket
-        private Socket listener = null;
-        private Socket handler = null;
+        public static string? stringData = null;
 
-        
+        //Creat TCP/IP socket
+        private Socket listener;
+        private Socket handler;
+        private TcpListener server;
+        private TcpClient client;
+        private NetworkStream ns;
+
+
+        public byte[] byteData = new byte[1024];
+        public void ServerStart(object obj)
+        {
+            //9999포트에 ip주소다 받기
+            server = new TcpListener(IPAddress.Any, 9999);
+            // Server 시작
+            server.Start();
+            ServerChart.Add(new MessageModel
+            {
+                Time = DateTime.Now,
+                message = "Server Start"
+            });
+
+            ServerChart.Add(new MessageModel
+            {
+                Time = DateTime.Now,
+                message = "Client wait..."
+            });
+
+            //클라이언트 객체를 만들어 9999에 연결한 client 받기
+            //client가 접속할때까지 서버는 해당 구문에서 블락
+            client = server.AcceptTcpClient();
+
+            //client에서 받은 데이터를 받을 객체 생성
+            ns = client.GetStream();
+
+
+            ns.Read(byteData, 0, byteData.Length);
+
+            string stringData = Encoding.Default.GetString(byteData);
+
+            ServerChart.Add(new MessageModel
+            {
+                Time = DateTime.Now,
+                message = stringData
+            });
+
+
+
+
+        }
+
+        public void CloseServer(object obj)
+        {
+            server.Stop();
+            ServerChart.Add(new MessageModel
+            {
+                Time = DateTime.Now,
+                message = "Server Stop"
+            });
+
+            ns.Close();
+
+        }
+
         public static string getLocalIPAddress()
         {
             IPHostEntry host;
@@ -52,15 +112,17 @@ namespace TCIIPChart.ViewModel
             }
 
             return "127.0.0.1";
-            
+
         }
 
         public void connectionListen(object sender)
         {
             Console.WriteLine("서버콘솔창 \n\n\n");
-            ServerChart.Add(new MessageModel { 
-                Time= DateTime.Now,
-                message="TEST"});
+            ServerChart.Add(new MessageModel
+            {
+                Time = DateTime.Now,
+                message = "TEST"
+            });
 
             // TcpListener 생성자에 붙는 매개변수는 
             // 첫번째는 IP를 두번째는 port 번호입니다.
@@ -96,7 +158,7 @@ namespace TCIIPChart.ViewModel
             ns.Close();
 
         }
-        
+
         public Action CloseAction { get; set; }
 
         public void CloseSocket()
@@ -106,7 +168,7 @@ namespace TCIIPChart.ViewModel
                 handler.Close();
                 handler.Dispose();
             }
-            if (listener!=null)
+            if (listener != null)
             {
                 listener.Close();
                 listener.Dispose();
