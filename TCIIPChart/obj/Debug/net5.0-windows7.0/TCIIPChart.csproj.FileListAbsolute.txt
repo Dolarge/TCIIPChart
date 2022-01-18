@@ -22,3 +22,4 @@ C:\Users\dh.cheon\source\repos\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows7.0
 C:\Users\dh.cheon\source\repos\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows7.0\TCIIPChart.pdb
 C:\Users\dh.cheon\source\repos\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows7.0\TCIIPChart.genruntimeconfig.cache
 C:\Users\dh.cheon\source\repos\TCIIPChart\TCIIPChart\bin\Debug\net5.0-windows7.0\Prism.dll
+C:\Users\dh.cheon\source\repos\TCIIPChart\TCIIPChart\obj\Debug\net5.0-windows7.0\TCIIPChart.csproj.CopyComplete
