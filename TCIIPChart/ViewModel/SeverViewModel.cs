@@ -23,7 +23,12 @@ namespace TCIIPChart.ViewModel
 
         public SeverViewModel()
         {
-
+            //Server start
+            //clientManger 
+            // -> messageParsingAction
+            // -> changeListViewAction
+            //-> UserList
+            //connectCheckThread start
             this.ConnectBtnClick = new DelegateCommand<object>(this.ServerStart, Cansubmit);
         }
 
