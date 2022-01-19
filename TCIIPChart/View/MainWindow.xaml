@@ -6,6 +6,7 @@
         xmlns:VM="clr-namespace:TCIIPChart.ViewModel" d:DataContext="{d:DesignInstance Type=VM:SeverViewModel}"
         mc:Ignorable="d"
         Title="Server" Height="450" Width="800">
+    Datacontext with prism
     <Window.DataContext>
         <VM:SeverViewModel/>
     </Window.DataContext>

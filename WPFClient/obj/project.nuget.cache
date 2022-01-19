@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dZGYYagUliiMqqOMAtha5ZLQaivtT1T63EQpZ+Rf+ZNpx4Db5W4mMt+QuwC42IdIoPky61kLRk0VH4Tjsr4Gow==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\WPFClient\\WPFClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\천도현\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}
