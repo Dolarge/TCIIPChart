@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZA70ByITa6ONg3OSzmJPF0tFECmd6aAyYYETHcn9fC4nZtrgERFANUJ2XKApFdsf71EUsvUNXDDGLwoobVs9Tg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\천도현\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}

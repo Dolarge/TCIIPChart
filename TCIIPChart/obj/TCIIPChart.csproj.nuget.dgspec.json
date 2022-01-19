@@ -1,36 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dh.cheon\\source\\repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj": {}
+    "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dh.cheon\\source\\repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj": {
+    "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dh.cheon\\source\\repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj",
+        "projectUniqueName": "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj",
         "projectName": "TCIIPChart",
-        "projectPath": "C:\\Users\\dh.cheon\\source\\repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj",
-        "packagesPath": "C:\\Users\\dh.cheon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dh.cheon\\source\\repos\\TCIIPChart\\TCIIPChart\\obj\\",
+        "projectPath": "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\TCIIPChart\\TCIIPChart.csproj",
+        "packagesPath": "C:\\Users\\천도현\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\천도현\\Source\\Repos\\TCIIPChart\\TCIIPChart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\Offline Packages",
-          "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dh.cheon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\천도현\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -73,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

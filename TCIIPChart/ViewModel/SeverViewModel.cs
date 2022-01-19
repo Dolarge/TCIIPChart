@@ -11,6 +11,7 @@ using TCIIPChart.Model;
 namespace TCIIPChart.ViewModel
 {
 
+    //
     public interface IViewModel { }
 
     public class SeverViewModel : BindableBase, IViewModel
